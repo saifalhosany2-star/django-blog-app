@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog</title>
+</head>
+<body>
+
+<h2>Base Template</h2>
+
+<p>
+    <a href="/api/v1/register/">Register</a> |
+    <a href="/api/v1/login/">Login</a> |
+    <a href="/api/v1/logout/">Logout</a>
+</p>
+
+{% if messages %}
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+{% endif %}
+
+{% block content %}{% endblock %}
+
+</body>
+</html>
